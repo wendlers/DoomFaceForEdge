@@ -1,0 +1,21 @@
+<drawables>
+    <bitmap id="LauncherIcon" filename="launcher_icon.svg" />
+    <bitmap id="DoomFace_1_1" filename="doom_face_1_1.png" />
+    <bitmap id="DoomFace_1_2" filename="doom_face_1_2.png" />
+    <bitmap id="DoomFace_1_3" filename="doom_face_1_3.png" />
+    <bitmap id="DoomFace_1_4" filename="doom_face_1_4.png" />
+    <bitmap id="DoomFace_1_5" filename="doom_face_1_5.png" />
+    <bitmap id="DoomFace_1_6" filename="doom_face_1_6.png" />
+    <bitmap id="DoomFace_2_1" filename="doom_face_2_1.png" />
+    <bitmap id="DoomFace_2_2" filename="doom_face_2_2.png" />
+    <bitmap id="DoomFace_2_3" filename="doom_face_2_3.png" />
+    <bitmap id="DoomFace_2_4" filename="doom_face_2_4.png" />
+    <bitmap id="DoomFace_2_5" filename="doom_face_2_5.png" />
+    <bitmap id="DoomFace_2_6" filename="doom_face_2_6.png" />    
+    <bitmap id="DoomFace_3_1" filename="doom_face_3_1.png" />
+    <bitmap id="DoomFace_3_2" filename="doom_face_3_2.png" />
+    <bitmap id="DoomFace_3_3" filename="doom_face_3_3.png" />
+    <bitmap id="DoomFace_3_4" filename="doom_face_3_4.png" />
+    <bitmap id="DoomFace_3_5" filename="doom_face_3_5.png" />
+    <bitmap id="DoomFace_3_6" filename="doom_face_3_6.png" />    
+</drawables>
