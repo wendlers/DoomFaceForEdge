@@ -1,5 +1,11 @@
 <drawables>
     <bitmap id="LauncherIcon" filename="launcher_icon.svg" />
+    <bitmap id="DoomFace_0_1" filename="doom_face_0_1.png" />
+    <bitmap id="DoomFace_0_2" filename="doom_face_0_2.png" />
+    <bitmap id="DoomFace_0_3" filename="doom_face_0_3.png" />
+    <bitmap id="DoomFace_0_4" filename="doom_face_0_4.png" />
+    <bitmap id="DoomFace_0_5" filename="doom_face_0_5.png" />
+    <bitmap id="DoomFace_0_6" filename="doom_face_0_6.png" />
     <bitmap id="DoomFace_1_1" filename="doom_face_1_1.png" />
     <bitmap id="DoomFace_1_2" filename="doom_face_1_2.png" />
     <bitmap id="DoomFace_1_3" filename="doom_face_1_3.png" />

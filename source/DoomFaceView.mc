@@ -14,11 +14,12 @@ class DoomFaceView extends WatchUi.DataField {
     private var hrZones;
     
     // Doom face bitmaps
+    private var doomFacesTiny;
     private var doomFacesSmall;
     private var doomFacesMedium;
     private var doomFacesLarge;
     
-    // Zone threshold (30 seconds)
+    // Zone threshold (in seconds)
     private const ZONE_THRESHOLD = 5;
     
     function initialize() {
@@ -35,11 +36,18 @@ class DoomFaceView extends WatchUi.DataField {
         if (hrZones == null) {
             hrZones = [100, 120, 140, 160, 180, 200];
         }
-        hrZones = [100 - 20, 120 - 20, 140 - 20, 160 - 20, 180 - 20, 200 - 20];        
     }
     
     function onLayout(dc) {
         // Load doom face images
+        doomFacesTiny = new [6];
+        doomFacesTiny[0] = WatchUi.loadResource(Rez.Drawables.DoomFace_0_1); // Normal
+        doomFacesTiny[1] = WatchUi.loadResource(Rez.Drawables.DoomFace_0_2); // Slightly stressed
+        doomFacesTiny[2] = WatchUi.loadResource(Rez.Drawables.DoomFace_0_3); // Stressed
+        doomFacesTiny[3] = WatchUi.loadResource(Rez.Drawables.DoomFace_0_4); // Very stressed
+        doomFacesTiny[4] = WatchUi.loadResource(Rez.Drawables.DoomFace_0_5); // Damaged
+        doomFacesTiny[5] = WatchUi.loadResource(Rez.Drawables.DoomFace_0_6); // Bloody
+
         doomFacesSmall = new [6];
         doomFacesSmall[0] = WatchUi.loadResource(Rez.Drawables.DoomFace_1_1); // Normal
         doomFacesSmall[1] = WatchUi.loadResource(Rez.Drawables.DoomFace_1_2); // Slightly stressed
@@ -114,27 +122,26 @@ class DoomFaceView extends WatchUi.DataField {
         // Calculate position to center the image
         var width = dc.getWidth();
         var height = dc.getHeight();
+        var bitmap = null;
 
-        /*         
-        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(width / 2, height - 20, Graphics.FONT_XTINY, 
-                   "W: " + width + " H: " + height, 
-                   Graphics.TEXT_JUSTIFY_CENTER);        
-        */
+        if (doomFacesLarge != null && height >= 626) {
+            bitmap = doomFacesLarge[currentZone];
+        }
+        else if (doomFacesMedium != null && height >= 314) {
+            bitmap = doomFacesMedium[currentZone];
+        } else if (doomFacesSmall != null && height >= 154) {
+            bitmap = doomFacesSmall[currentZone];
+        } else if (doomFacesSmall != null && height >= 88) {
+            bitmap = doomFacesTiny[currentZone];
+        } else {
+            dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
+            dc.drawText(width / 2, height - 20, Graphics.FONT_XTINY, 
+                       "Field Too Small (" + width + "x" + height + ")", 
+                       Graphics.TEXT_JUSTIFY_CENTER);        
+        }
 
         // Draw the appropriate doom face
-        if (doomFacesSmall != null && doomFacesSmall[currentZone] != null) {
-            var bitmap = null;
-
-            if (height >= 626) {
-                bitmap = doomFacesLarge[currentZone];
-            }
-            else if (height >= 314) {
-                bitmap = doomFacesMedium[currentZone];
-            } else {
-                bitmap = doomFacesSmall[currentZone];
-            }
-
+        if (bitmap != null) {            
             var bitmapWidth = bitmap.getWidth();
             var bitmapHeight = bitmap.getHeight();
             
