@@ -1,4 +1,4 @@
-# DoomFace DataField for Garmin Edge 1050
+# DoomFace DataField for Garmin Edge
 
 [![Connect IQ](https://img.shields.io/badge/Connect%20IQ-4.0.0+-00A86B)](https://developer.garmin.com/connect-iq/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
