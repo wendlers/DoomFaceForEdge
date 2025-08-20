@@ -11,12 +11,12 @@ A Garmin Connect IQ Data Field that displays the classic DOOM face sprites based
 
 - **Real-time HR Zone Monitoring**: Automatically detects and tracks time spent in each heart rate zone
 - **Classic DOOM Face Sprites**: Six different face expressions from happy to bloody
-- **30-Second Zone Threshold**: Face changes after maintaining a zone for 30+ seconds
+- **5-Second Zone Threshold**: Face changes after maintaining a zone for 5+ seconds
 - **Automatic HR Zone Detection**: Pulls your personalized HR zones from your Garmin profile
 - **Current Stats Display**: Shows current heart rate and zone number
 
 ## 📋 Requirements
-- **Device**: Garmin Edge 540, 840, Explore 2, 1040, 1050
+- **Device**: Garmin Edge 540, 840, Explore 2, 1040, 1050, MTB
 - **Connect IQ SDK**: Version 4.0.0 or higher
 - **API Level**: 4.0.0 minimum
 - **Development Tools**: 
@@ -28,10 +28,10 @@ A Garmin Connect IQ Data Field that displays the classic DOOM face sprites based
 
 ### For Users (Installing the PRG file)
 
-1. Download the compiled `DoomFaceForEdge.prg` file from releases
+1. Download the compiled `DoomFaceForEdgeX.prg` file from releases
 2. Connect your Edge to your computer
 3. Copy the PRG file to your device's `GARMIN/APPS` folder
-4. Restart your Edge 1050
+4. Restart your Edge
 5. Add the DoomFace data field to your activity profile
 
 ### For Developers (Building from Source)
